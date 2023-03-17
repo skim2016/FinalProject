@@ -12,4 +12,6 @@ import javax.persistence.Id;
 public class Member {
     @Id @GeneratedValue
     private long id;
+
+
 }
