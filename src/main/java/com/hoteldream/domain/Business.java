@@ -31,7 +31,7 @@ public class Business {
 
     private String buAddress;
 
-    private String phoneNumber;
+    private String buPhoneNumber;
 
     private String buName;
 

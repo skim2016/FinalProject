@@ -13,9 +13,16 @@ public class Member {
     @Id @GeneratedValue
     private long id;
 
-
-
     private String meEmail;
+
+    private String mePassword;
+
+    private String meName;
+
+    private String mePhoneNumber;
+
+    //private int adminCheck;
+
 
 
 }
