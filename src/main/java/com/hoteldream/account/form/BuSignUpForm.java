@@ -8,7 +8,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 @Data
-public class buSignUpForm {
+public class BuSignUpForm {
     @NotBlank
     @Email
     private String email;
@@ -23,12 +23,16 @@ public class buSignUpForm {
     private String name;
 
     @NotBlank
+    private String phoneNumber;
+
+    @NotBlank
     @Length(min = 3, max = 30)
     @Pattern(regexp = "^[ㄱ-ㅎ가-힣-a-zA0-9]{3,30}$")
     private String buTitle;
 
     @NotBlank
     @Length(min = 3, max = 50)
+    @Pattern(regexp = "^[ㄱ-ㅎ가-힣-a-zA0-9]{3,50}$")
     private String buAddress;
 
     @NotBlank
