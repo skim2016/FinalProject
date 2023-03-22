@@ -1,0 +1,26 @@
+.container{
+    width: 100%;
+}
+
+.meSignUpForm{
+    text-align: center;
+}
+
+.form-group{
+    margin: 5%;
+}
+
+input{
+    width: 50%;
+    height: 5vh;
+}
+
+small{
+    width: 50%;
+    height: 5vh;
+}
+
+button{
+    width: 15%;
+    height: 5vh;
+}

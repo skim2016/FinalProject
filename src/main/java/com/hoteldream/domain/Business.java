@@ -1,14 +1,14 @@
 package com.hoteldream.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-@Getter @Setter
+@Getter @Setter @EqualsAndHashCode(of = "id")
+@Builder @AllArgsConstructor @NoArgsConstructor
 public class Business {
 
     // 참조 DB
@@ -23,6 +23,10 @@ public class Business {
 
     private String buPassword;
 
+    private String buName;
+
+    private String buPhoneNumber;
+
     private String buTitle;
 
     // private String roTitle;
@@ -31,9 +35,10 @@ public class Business {
 
     private String buAddress;
 
-    private String buPhoneNumber;
+    private String hotelPicture;
 
-    private String buName;
+
+
 
     private int approval;
 }
