@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko"
+      xmlns:th="http:www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTELDREAM</title>
+    <link rel="stylesheet" href="/css/member/buSignUpForm.css">
 </head>
 <body>
+<div class="container">
+    <form action="#" th:action="@{/member/buSignUpForm}" th:object="${buSignUpForm}" class="buSignUpForm" method="post">
+        <div class="form-group">
+            <input type="email" placeholder="Email" th:field="*{email}" required> <br>
+            <small th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</small>
+        </div>
 
+        <div class="form-group">
+            <input type="password" placeholder="Password" th:field="*{password}" required> <br>
+            <small th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</small>
+        </div>
+
+        <div class="form-group">
+            <input type="text" placeholder="Name" th:field="*{name}" required> <br>
+            <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Errors</small>
+        </div>
+
+        <div class="form-group">
+            <input type="text" placeholder="PhoneNumber" th:field="*{phoneNumber}" required> <br>
+            <small th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}">PhoneNumber Errors</small>
+        </div>
+
+        <div class="form-group">
+            <input type="text" placeholder="Hotel Name" th:field="*{buTitle}" required> <br>
+            <small th:if="${#fields.hasErrors('buTitle')}" th:errors="*{buTitle}">BuTitle Errors</small>
+        </div>
+
+        <div class="form-group">
+            <input type="text" placeholder="Hotel Address" th:field="*{buAddress}" required> <br>
+            <small th:if="${#fields.hasErrors('buAddress')}" th:errors="*{buAddress}">BuAddress Errors</small>
+        </div>
+
+        <div class="form-group">
+            <textarea type="text" th:field="*{hotelPicture}" placeholder="Hotel Picture" required></textarea> <br>
+            <small th:if="${#fields.hasErrors('hotelPicture')}" th:errors="*{hotelPicture}">Hotel Picture Errors</small>
+        </div>
+
+        <button type="submit">회원가입</button>
+
+    </form>
+</div>
 </body>
 </html>

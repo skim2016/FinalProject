@@ -33,16 +33,16 @@ public class AccountController {
     }
 
     // member
-    @GetMapping("/meSignUpForm")
+    @GetMapping("member/meSignUpForm")
     public String meSignUpForm(Model model){
         model.addAttribute("meSignUpForm",new MeSignUpForm());
-        return "member/meSignUpForm";
+        return "/member/meSignUpForm";
     }
 
-    @PostMapping("/meSignUpForm")
+    @PostMapping("member/meSignUpForm")
     public String meSignUpForm(@Valid MeSignUpForm meSignUpForm, Errors errors){
         if(errors.hasErrors()){
-            return "jmember/meSignUpForm";
+            return "/member/meSignUpForm";
         }
         memberService.createNewMember(meSignUpForm);
         return "redirect:/";
@@ -50,13 +50,13 @@ public class AccountController {
     //member end
 
     //business
-    @GetMapping("/buSignUpForm")
+    @GetMapping("member/buSignUpForm")
     public String buSignUpForm(Model model){
         model.addAttribute("buSignUpForm", new BuSignUpForm());
         return "/member/buSignUpForm";
     }
 
-    @PostMapping("/buSignUpForm")
+    @PostMapping("member/buSignUpForm")
     public String buSignUpForm(@Valid BuSignUpForm buSignUpForm, Errors errors){
         if(errors.hasErrors()){
             return "/member/buSignUpForm";

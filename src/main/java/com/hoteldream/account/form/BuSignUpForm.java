@@ -19,7 +19,6 @@ public class BuSignUpForm {
 
     @NotBlank
     @Length(min = 3, max = 20)
-    @Pattern(regexp = "^[ㄱ-ㅎ가-힣-a-zA-Z0-9]{3,20}$")
     private String name;
 
     @NotBlank
@@ -27,12 +26,10 @@ public class BuSignUpForm {
 
     @NotBlank
     @Length(min = 3, max = 30)
-    @Pattern(regexp = "^[ㄱ-ㅎ가-힣-a-zA0-9]{3,30}$")
     private String buTitle;
 
     @NotBlank
-    @Length(min = 3, max = 50)
-    @Pattern(regexp = "^[ㄱ-ㅎ가-힣-a-zA0-9]{3,50}$")
+    @Length(min = 3, max = 30)
     private String buAddress;
 
     @NotBlank
